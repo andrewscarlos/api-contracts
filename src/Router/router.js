@@ -2,6 +2,9 @@ const routes = require('express').Router()
 const path = require('path')
 const fs = require('fs')
 const multer = require('multer')
+const configUpload = require('../Config/upload')
+
+const envio = multer(configUpload)
 
 
 
@@ -12,7 +15,7 @@ const uploadValidator = require('../Middlewares/upload')
 
 const storage = multer.diskStorage({
 	destination: function (req, file, cb) {
-		cb(null, path.resolve(__dirname, '../../uploads'));
+		cb(null, path.resolve(__dirname, '..','..','uploads'));
 	},
     filename: function (req, file, cb) {
 
@@ -21,8 +24,8 @@ const storage = multer.diskStorage({
 });
 
 
-const imgfolder = (req, res, next) => {
-	const folder = path.resolve(__dirname, '../../uploads')
+const imgfolder = (req, res, next) => {    // ve se tem algu
+	const folder = path.resolve(__dirname, '..','..','uploads')
 	if (!fs.existsSync(folder)) {
 		fs.mkdirSync(folder,{recursive: true});
 	}
@@ -42,7 +45,11 @@ routes.post('/contratos', ContratoController.create)
 //ROTAS DE UPLOAD DE IMAGENS
 routes.post('/contratos/upload/:id', uploadValidator, UploadController.create)
 
-routes.post('/impfile',imgfolder,upload.single('file'),UploadController.impfile)
+//routes.post('/impfile', imgfolder , upload.single('file'), UploadController.impfile)
+
+routes.post('/impfile', envio.single('file'), (req,res)=>{
+	return res.json(req.file)
+} )
 
 
 

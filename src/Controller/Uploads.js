@@ -5,12 +5,15 @@ const Contratos = require('../Model/contratos')
 const impfile = async (req,res) => {
     if(req.file){
         //upload sucesso
+        
         req.body.file = req.file
         //inserir no banco etc
     }
     console.log(req.body)
     return res.send(req.body)
 }
+
+
 
 module.exports = {
     async index(req, res){
