@@ -1,10 +1,10 @@
 const uploadValidation = async (req, res, next) => {
 
     const {
-        CNHorCPF
+        cNHorCPF
     } = req.body;
     
-    if (!CNHorCPF ) {
+    if (!cNHorCPF ) {
         return res.status(400).json({ error: 'É necessario o envio uma foto do CPF ou CNH' })
     } 
      next()
