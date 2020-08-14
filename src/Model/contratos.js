@@ -2,23 +2,23 @@ const mongoose = require('mongoose')
 
 const ContratosSchema = new mongoose.Schema({
 
-    State:{type: String, default: 'Create'},
+    state:{type: String, default: 'Create'},
 
-    Nome: { type: String, required: true },
-    Email: { type: String, required: true },
-    Cpf: { type: String, required: true },
-    ValorEmprestimo: { type: Number, required: true },
+    nome: { type: String, required: true },
+    email: { type: String, required: true },
+    cpf: { type: String, required: true },
+    valorEmprestimo: { type: Number, required: true },
 
-    RendaMensal: { type: Number, default: null},
-    DataNascimento: { type: Date, default: null }, 
-    EstadoCivil: { type: String , default: null},
-    Endereco: {type: String, default: null},
+    rendaMensal: { type: Number, default: null},
+    dataNascimento: { type: Date, default: null }, 
+    estadoCivil: { type: String , default: null},
+    endereco: {type: String, default: null},
     
-    CNHorCPF: String,
-    ComprovanteRenda: {type: String, default: null},
-    Imovel: { type: String, default: null},
+    cNHorCPF: {type: String, default: null},
+    comprovanteRenda: {type: String, default: null},
+    imovel: { type: String, default: null},
 
-    Status: Boolean,
+    status: Boolean,
 },{
     timestamps: true
 })
