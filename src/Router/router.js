@@ -47,7 +47,7 @@ routes.post('/contratos/upload/:id', uploadValidator, UploadController.create)
 
 //routes.post('/impfile', imgfolder , upload.single('file'), UploadController.impfile)
 
-routes.post('/impfile', envio.single('file'), (req,res)=>{
+routes.post('/impfile', imgfolder, envio.single('file'), (req,res)=>{
 	return res.json(req.file)
 } )
 
