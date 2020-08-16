@@ -18,7 +18,7 @@ const ContratosSchema = new mongoose.Schema({
     comprovanteRenda: {type: String, default: null},
     imovel: { type: String, default: null},
 
-    status: Boolean,
+    status: {type: String, default:'Analise'},
 },{
     timestamps: true
 })
