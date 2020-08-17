@@ -14,8 +14,8 @@
     "pm2": "^4.4.0"
   },
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "npx pm2 start ecosystem.config.js"
+    
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC"

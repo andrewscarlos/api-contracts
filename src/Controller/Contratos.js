@@ -43,13 +43,26 @@ const create = async (req, res) => {
 
 
 
-const update = async (req, res) => {
-       
+const update = async (req, res) => { // essa funcao executa o update do contrato caso o state seje de create
+
+    const contratos = await Contratos.findById(req.params.id)
     try{
-        const response = await Contratos.findByIdAndUpdate(req.params.id, req.body, { new: true })
-        return res.status(200).json(response)
+         if(contratos.state === 'Create'){
+        
+           // contratos = await Contratos.findByIdAndUpdate(req.params.id, req.body, { new: true })
+            await contratos.updateOne( req.body, {new: true})
+            return res.status(200).json(contratos)
+         }else{
+            console.log('else')
+            return res.status(200).json({
+               
+                 Mensagem: 'O seu status precisa estao em Create para poder alterar as informações ! '
+             })
+         }
+        
     }catch(error){
         if(error){
+            console.log('catch')
             return res.status(500).json(error)
         }
     } 

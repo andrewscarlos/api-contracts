@@ -15,16 +15,18 @@ const index = async (req, res) => {
             if(result / 2 == 0){
                 
                 await contratos.update({
-                    status: 'Aprovado'
+                    status: 'Aprovado',
+                    state:'Resultado'
                 })
             }else{
                 
                 await contratos.update({
-                    status: 'Reprovado'
+                    status: 'Reprovado',
+                    state:'Resultado'
                 })
             }
             if(contratos.status == 'Aprovado'){
-                console.log('if 3')
+                
                 return res.status(200).json({
                     Resultado: 'É com grande alegria que dizemos ao Sr(a) que seu emprestimo foi altorizado !!!'
                 })

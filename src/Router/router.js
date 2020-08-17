@@ -23,7 +23,7 @@ routes.post('/contratos', ContratoController.create)
 
 
 //ROTAS DE UPLOAD DE IMAGENS
-routes.put('/contratos/upload/:id', upload.array('file'),uploadValidator, UploadController.update)
+routes.put('/contratos/upload/:id', upload.array('file'), UploadController.update)
 
 
 //ROTAS DE RESULTADOS

@@ -7,13 +7,6 @@ const path = require('path')
 const fs = require('fs')
 
 
-
-//('/contratos/upload', update.single('file'), (req,res)=>{
-//	console.log(req.file.filename)
-//	return res.json(req.file)
-//} )
-
-
    const index = async (req, res) =>{
        try {
             // essa rota retorna todos as collections dos seus respectivos state (tem q passar o state como parametro 'Create', 'Update' ou 'Result') 
