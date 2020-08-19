@@ -3,8 +3,15 @@
 
  - Esta API cria contratos para futuro emprestimos, ela possue 3 estados ('Criação', 'Upload' e 'Resultado'), é necessario a criacao de um contrato, logo apos o usuario devera passar as imagens requisitadas para avalição do e em seguida o usuario tera o resultado se seu emprestimo.
 
+## Recursos do Projeto
 
-# Executando
+- Linguagem: [_NodeJS 14_](https://nodejs.org/en/docs/)
+
+- Main dependencies:  [_Express ^4.17.1_](https://www.npmjs.com/package/express), [_Mongoose ^5.10.0_](https://www.npmjs.com/package/mongoose), 
+[_multer^1.4.2_](https://github.com/expressjs/multer)
+- DB: [_MongoDB_](https://docs.mongodb.com/manual/)
+
+## Executando
 
 run:
 
@@ -60,7 +67,7 @@ $ npm start
 }
 
 ```
-# Metodos Upload
+## Metodos Upload
 
 - PUT  Envio de imagens
   é necessario o envio de "files" e o id como paramatro
@@ -69,7 +76,7 @@ $ npm start
 
 
 
-# Metodos para verificar o resultado dos contratos POR ID
+## Metodos para verificar o resultado dos contratos POR ID
 
 - GET todos osContratos
 
