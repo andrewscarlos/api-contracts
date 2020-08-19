@@ -2,11 +2,6 @@ const Contratos = require('../Model/contratos')
 
 const multer = require('multer')
 const configUpload = require('../Config/upload')
-const upload = multer(configUpload)
-const path = require('path')
-const fs = require('fs')
-
-
    const index = async (req, res) =>{
        try {
             // essa rota retorna todos as collections dos seus respectivos state (tem q passar o state como parametro 'Create', 'Update' ou 'Result') 
@@ -17,7 +12,6 @@ const fs = require('fs')
        }
        
     }
-
         //essa rota faz o upload das imgs, se o state for upload
     const update = async  (req, res) =>{
 
@@ -58,10 +52,6 @@ const fs = require('fs')
             
       
     }
-
-
-    
-
 module.exports = {
     index,
     update

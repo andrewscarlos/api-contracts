@@ -1,7 +1,6 @@
 const Contratos = require('../Model/contratos')
 
 const index = async (req, res) => {
-
     try{
         const contratos = await Contratos.findOne({_id: req.params.id})
         if (contratos == null) {
@@ -41,9 +40,6 @@ const index = async (req, res) => {
             
             Mensagem: 'O seu state precisa estar como Upload '
         })
-
-       
-       
     }catch(error){
         if(error){
             console.log('if 4')
@@ -51,7 +47,6 @@ const index = async (req, res) => {
         }
     } 
 }
-
 module.exports = {
     index
 }

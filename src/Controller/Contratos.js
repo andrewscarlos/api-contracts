@@ -13,7 +13,6 @@ const index = async (req, res) => {
         }
     } 
 }
-
 // retorna um conrtato especifico por _id
 const show = async (req, res) => {
 
@@ -26,7 +25,6 @@ const show = async (req, res) => {
         }
     } 
 }
-
 // cria um contrato novo se estiver td certo com os campos obrigatorios
 const create = async (req, res) => {
 
@@ -41,14 +39,10 @@ const create = async (req, res) => {
     } 
 }
 
-
-
 const update = async (req, res) => { // essa funcao executa o update do contrato caso o state seje de create
-
     const contratos = await Contratos.findById(req.params.id)
     try{
          if(contratos.state === 'Create'){
-        
             await contratos.updateOne( req.body, {new: true})
             return res.status(200).json(contratos)
          }else{
@@ -57,8 +51,7 @@ const update = async (req, res) => { // essa funcao executa o update do contrato
                
                  Mensagem: 'O seu status precisa estao em Create para poder alterar as informações ! '
              })
-         }
-        
+         } 
     }catch(error){
         if(error){
             console.log('catch')
@@ -67,7 +60,6 @@ const update = async (req, res) => { // essa funcao executa o update do contrato
     } 
 
 }
-
 module.exports = {
     index,
     show,
