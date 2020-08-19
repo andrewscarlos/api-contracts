@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 
+// cria uma colection no mongo
+
 const ContratosSchema = new mongoose.Schema({
 
     state:{type: String, default: 'Create'},

@@ -1,7 +1,7 @@
 const multer = require('multer')
 const path =  require('path')
 const crypto = require('crypto')
-
+// faz upload das img passadas no file da requisição e salva na pasta ./uploads
 module.exports = {
     storage : multer.diskStorage({
         destination: path.resolve(__dirname, '..','..','uploads'),
