@@ -23,7 +23,7 @@ const configUpload = require('../Config/upload')
                 
                 return res.status(401).json({ error: "Id Inexistente."}) // verifica se o id existe
             }
-            console.log(contratos)
+           
             if(item.length <= 3){
              
             await contratos.updateOne({
