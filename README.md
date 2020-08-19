@@ -3,6 +3,8 @@
 
  - Esta API cria contratos para futuro emprestimos, ela possue 3 estados ('Criação', 'Upload' e 'Resultado'), é necessario a criacao de um contrato, logo apos o usuario devera passar as imagens requisitadas para avalição do e em seguida o usuario tera o resultado se seu emprestimo.
 
+ 
+
 ## Recursos do Projeto
 
 - Linguagem: [_NodeJS 14_](https://nodejs.org/en/docs/)
@@ -14,6 +16,7 @@
 ## Executando
 
 run:
+é necessario criar uma pasta "uploads" no diretorio raiz.
 
 ```bash
 $ npm i
