@@ -67,6 +67,8 @@ $ npm start
 
 [_http://localhost:5000/contratos/upload/<:id>_](http://localhost:5000/contratos/upload/<:id>)
 
+
+
 # Metodos para verificar o resultado dos contratos POR ID
 
 - GET todos osContratos

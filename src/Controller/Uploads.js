@@ -1,17 +1,5 @@
 const Contratos = require('../Model/contratos')
 
-const multer = require('multer')
-const configUpload = require('../Config/upload')
-   const index = async (req, res) =>{
-       try {
-            // essa rota retorna todos as collections dos seus respectivos state (tem q passar o state como parametro 'Create', 'Update' ou 'Result') 
-        const contratos = await Contratos.find({'State': {'$in': req.params.State}})
-        return res.json(contratos)
-       } catch (error) {
-        return res.status(500).json(error)
-       }
-       
-    }
         //essa rota faz o upload das imgs, se o state for upload
     const update = async  (req, res) =>{
 
@@ -24,8 +12,9 @@ const configUpload = require('../Config/upload')
                 return res.status(401).json({ error: "Id Inexistente."}) // verifica se o id existe
             }
            
-            if(item.length <= 3){
-             
+            if(item.length <= 3){ // esse if verifica se estao mandando  3 arquivos 
+                                  // se estiverem mandando mais de 3 arquivos ele retorna ao usuario q e permitido enviar somente 3 arquivos
+                                  // ou entao somente o arquivo da cnh ou cpf
             await contratos.updateOne({
                 cNHorCPF: item[0].filename, 
                state: 'Upload'
@@ -61,6 +50,5 @@ const configUpload = require('../Config/upload')
       
     }
 module.exports = {
-    index,
     update
 }
