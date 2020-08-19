@@ -23,16 +23,24 @@ const configUpload = require('../Config/upload')
                 
                 return res.status(401).json({ error: "Id Inexistente."}) // verifica se o id existe
             }
-
-            if(contratos.state = 'Upload'){
+            console.log(contratos)
+            if(item.length <= 3){
              
             await contratos.updateOne({
                 cNHorCPF: item[0].filename, 
-                comprovanteRenda: item[1].filename,
-               imovel: item[2].filename,
                state: 'Upload'
-               
             })
+            if(item[1] != null){
+                await contratos.updateOne({
+                    comprovanteRenda: item[1].filename
+                })  
+            }
+            if(item[2] != null){
+                await contratos.updateOne({
+                    imovel: item[2].filename,
+                })
+                
+            }
              
                 return res.json(req.files)
             }
@@ -40,7 +48,7 @@ const configUpload = require('../Config/upload')
             else{
         
                 return  res.send({
-                    error : 'Voce não pode adicionar as fotos, sem antes ter um cadastro'
+                    error : 'Voce pode passar no maximo 3 arquivos'
                 })
             } 
             

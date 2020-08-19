@@ -47,7 +47,7 @@ $ npm start
 
 ```javascript
 // Body
-{
+
 {
 	"nome": "nome",
 	"email": "email",
@@ -58,7 +58,7 @@ $ npm start
 	"estadoCivil": "Estado Ciil",
 	"endereco": "endereço"
 }
-}
+
 ```
 # Metodos Upload
 
