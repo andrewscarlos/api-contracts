@@ -1,11 +1,11 @@
 # apiContratos
 
 
-run:
+* run:
  npm i
  npm start
  
-Metodos dos Contratos
+* Metodos dos Contratos
 
 GET todos contratos
 http://localhost:5000/contratos/
@@ -44,7 +44,7 @@ http://localhost:5000/contratos/<:id>
 }
 
  
-Metodos para Uploads contratos POR ID
+* Metodos para Uploads contratos POR ID
 
 PUT http://localhost:5000/contratos/upload/<:id>
 //é necessario passar 3 files como requisição e tbm o id que sera colocado as imagens
