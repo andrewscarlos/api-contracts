@@ -28,10 +28,7 @@ routes.put('/contratos/:id', ContratoController.update)
 routes.post('/contratos', ContratoController.create)
 
 
-
                                           //ROTAS DE UPLOAD DE IMAGENS
-
-
 // endpoint necessita do id do contrato e faz o upload dos arquivos de imgs 
 routes.put('/contratos/upload/:id', upload.array('file'), UploadController.update)
 

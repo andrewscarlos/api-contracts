@@ -49,7 +49,6 @@ const update = async (req, res) => { // essa funcao executa o update do contrato
     try{
          if(contratos.state === 'Create'){
         
-           // contratos = await Contratos.findByIdAndUpdate(req.params.id, req.body, { new: true })
             await contratos.updateOne( req.body, {new: true})
             return res.status(200).json(contratos)
          }else{

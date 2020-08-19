@@ -10,17 +10,18 @@ const index = async (req, res) => {
         }
         if(contratos.state == 'Upload'){
        
-            const result = Math.random(1, 10)
+            const result = Math.floor(Math.random()*(10-1+1)+1);
+            console.log(result)
 
-            if(result / 2 == 0){
+            if(result % 2 == 0){
                 
-                await contratos.update({
+                await contratos.updateOne({
                     status: 'Aprovado',
                     state:'Resultado'
                 })
             }else{
                 
-                await contratos.update({
+                await contratos.updateOne({
                     status: 'Reprovado',
                     state:'Resultado'
                 })

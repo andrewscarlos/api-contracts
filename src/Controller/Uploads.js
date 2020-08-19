@@ -30,24 +30,28 @@ const fs = require('fs')
                 return res.status(401).json({ error: "Id Inexistente."}) // verifica se o id existe
             }
 
-            if(true){
+            if(contratos.state = 'Upload'){
              
-            await contratos.update({
+            await contratos.updateOne({
                 cNHorCPF: item[0].filename, 
                 comprovanteRenda: item[1].filename,
                imovel: item[2].filename,
                state: 'Upload'
                
             })
+             
                 return res.json(req.files)
             }
+           
             else{
+        
                 return  res.send({
                     error : 'Voce não pode adicionar as fotos, sem antes ter um cadastro'
                 })
             } 
             
         } catch (error) {
+            
             return res.status(500).json(error)
         }
             
