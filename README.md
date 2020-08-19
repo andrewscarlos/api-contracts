@@ -1,69 +1,75 @@
-# apiContratos
+
+## API CONTRTOS
+
+ - Esta API cria contratos para futuro emprestimos, ela possue 3 estados ('Criação', 'Upload' e 'Resultado'), é necessario a criacao de um contrato, logo apos o usuario devera passar as imagens requisitadas para avalição do e em seguida o usuario tera o resultado se seu emprestimo.
 
 
-* run:
- npm i
- npm start
- 
-* Metodos dos Contratos
+# Executando
 
-GET todos contratos
-http://localhost:5000/contratos/
+run:
 
-GET por id
-http://localhost:5000/contratos//<:id>
+```bash
+$ npm i
 
-POST para criar contratos
-http://localhost:5000/contratos
+$ npm start
+```
+# Metodos Contratos
 
+- GET todos osContratos
+
+[_http://localhost:5000/contratos/_](http://localhost:5000/contratos/)
+
+- GET por id
+
+[_http://localhost:5000/contratos/<:id>_](http://localhost:5000/contratos/<:id>)
+
+- POST para criar contratos
+
+[_http://localhost:5000/contratos_](http://localhost:5000/contratos)
+
+```javascript
 // Body
 {
-	"nome": "nome",
-
+    "nome": "nome",
 	"email": "email",
-
 	"cpf": "cpf",
-
 	"valorEmprestimo": 40.000,
-
 	"rendaMensal": 2.000,
-
 	"dataNascimento": "1996-10-08T15:17:00.000",
-
 	"estadoCivil": "Estado Ciil",
-	
 	"endereco": "endereço"
 }
+```
 
-PUT atualizar contratos por id
-http://localhost:5000/contratos/<:id>
+- PUT atualizar contratos por id
 
+[_http://localhost:5000/contratos/<:id>_](http://localhost:5000/contratos/<:id>)
+
+```javascript
 // Body
 {
+{
 	"nome": "nome",
-
 	"email": "email",
-
 	"cpf": "cpf",
-
 	"valorEmprestimo": 40.000,
-
 	"rendaMensal": 2.000,
-
 	"dataNascimento": "1996-10-08T15:17:00.000",
-
 	"estadoCivil": "Estado Ciil",
-
 	"endereco": "endereço"
 }
+}
+```
+# Metodos Upload
 
- 
-* Metodos para Uploads contratos POR ID
+- PUT  Envio de imagens
+  é necessario o envio de "files" e o id como paramatro
 
-PUT http://localhost:5000/contratos/upload/<:id>
-//é necessario passar 3 files como requisição e tbm o id que sera colocado as imagens
+[_http://localhost:5000/contratos/upload/<:id>_](http://localhost:5000/contratos/upload/<:id>)
 
-Metodos para ve o resultado dos contratos POR ID
+# Metodos para verificar o resultado dos contratos POR ID
 
-GET http://localhost:5000/contratos/upload/result/<:ID>
+- GET todos osContratos
+
+[_http://localhost:5000/contratos/upload/result/<:ID>_](http://localhost:5000/contratos/upload/result/<:ID>)
 
