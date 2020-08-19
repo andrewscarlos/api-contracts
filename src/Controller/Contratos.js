@@ -8,9 +8,9 @@ const index = async (req, res) => {
         const response = await Contratos.find()
         return res.status(200).json(response)
     }catch(error){
-        if(error){
+        
             return res.status(500).json(error)
-        }
+        
     } 
 }
 // retorna um conrtato especifico por _id
@@ -20,9 +20,7 @@ const show = async (req, res) => {
         const response = await Contratos.findById(req.params.id)
         return res.status(200).json(response)
     }catch(error){
-        if(error){
             return res.status(500).json(error)
-        }
     } 
 }
 // cria um contrato novo se estiver td certo com os campos obrigatorios
@@ -33,11 +31,10 @@ const create = async (req, res) => {
         const response = await Contratos.create({...cadastro})
         return res.status(200).json(response)
     }catch(error){
-        if(error){
             return res.status(500).json(error)
         }
     } 
-}
+
 
 const update = async (req, res) => { // essa funcao executa o update do contrato caso o state seje de create
     const contratos = await Contratos.findById(req.params.id)
@@ -53,10 +50,8 @@ const update = async (req, res) => { // essa funcao executa o update do contrato
              })
          } 
     }catch(error){
-        if(error){
-            console.log('catch')
             return res.status(500).json(error)
-        }
+        
     } 
 
 }
