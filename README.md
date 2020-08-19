@@ -19,12 +19,19 @@ http://localhost:5000/contratos
 // Body
 {
 	"nome": "nome",
+
 	"email": "email",
+
 	"cpf": "cpf",
+
 	"valorEmprestimo": 40.000,
+
 	"rendaMensal": 2.000,
+
 	"dataNascimento": "1996-10-08T15:17:00.000",
+
 	"estadoCivil": "Estado Ciil",
+	
 	"endereco": "endereço"
 }
 
@@ -34,12 +41,19 @@ http://localhost:5000/contratos/<:id>
 // Body
 {
 	"nome": "nome",
+
 	"email": "email",
+
 	"cpf": "cpf",
+
 	"valorEmprestimo": 40.000,
+
 	"rendaMensal": 2.000,
+
 	"dataNascimento": "1996-10-08T15:17:00.000",
+
 	"estadoCivil": "Estado Ciil",
+
 	"endereco": "endereço"
 }
 
