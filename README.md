@@ -7,7 +7,7 @@
 
 - Linguagem: [_NodeJS 14_](https://nodejs.org/en/docs/)
 
-- Main dependencies:  [_Express ^4.17.1_](https://www.npmjs.com/package/express), [_Mongoose ^5.10.0_](https://www.npmjs.com/package/mongoose), 
+- Dependencias:  [_Express ^4.17.1_](https://www.npmjs.com/package/express), [_Mongoose ^5.10.0_](https://www.npmjs.com/package/mongoose), 
 [_multer^1.4.2_](https://github.com/expressjs/multer)
 - DB: [_MongoDB_](https://docs.mongodb.com/manual/)
 
