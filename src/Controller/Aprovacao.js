@@ -28,7 +28,7 @@ const index = async (req, res) => {
             if(contratos.status == 'Aprovado'){
                 
                 return res.status(200).json({
-                    Resultado: 'É com grande alegria que dizemos ao Sr(a) que seu emprestimo foi altorizado !!!'
+                    Resultado: 'É com grande alegria que dizemos ao Sr(a) que seu emprestimo foi autorizado !!!'
                 })
             }else{
                 return res.status(200).json({
