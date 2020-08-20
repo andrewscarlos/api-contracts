@@ -55,6 +55,7 @@ const update = async (req, res) => { // essa funcao executa o update do contrato
     } 
 
 }
+
 module.exports = {
     index,
     show,

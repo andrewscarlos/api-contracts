@@ -4,7 +4,7 @@ const path = require('path')
 require('./src/Config/database')
 
 const port = process.env.PORT || 5000
-const HOST = '0.0.0.0'
+
 
 const app = express()
 app.use(express.json())
@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:true}))
 app.use('/files',express.static(path.resolve(__dirname, 'uploads')))
 app.use(router)
 
-app.listen(port,HOST,()=>{
+app.listen(port, ()=>{
     
-    console.log(`Runing on http://${HOST}:${port}`)
+    console.log(`server is running on port ${port}`)
 })
