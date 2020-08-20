@@ -6,6 +6,7 @@ const upload = multer(configUpload)
 const ContratoController = require('../Controller/Contratos')
 const UploadController = require('../Controller/Uploads')
 const AprovacaoController = require('../Controller/Aprovacao')
+
                                            //ROTAS DO ESTADO DE CRIAÇÃO DO CONTRATO
 //endpoint lista todos os contratos
 routes.get('/contratos', ContratoController.index)
